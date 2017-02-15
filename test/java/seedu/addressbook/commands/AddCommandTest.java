@@ -115,7 +115,7 @@ public class AddCommandTest {
     }
 
     @Test
-    public void addCommand_emptyAddressBook_addressBookContainsPerson() {
+    public void addCommand_emptyAddressBook_addressBookContainsPerson() throws Exception {
         Person p = TestUtil.generateTestPerson();
         AddCommand command = new AddCommand(p);
         AddressBook book = new AddressBook();
