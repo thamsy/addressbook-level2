@@ -65,11 +65,9 @@ public class Name {
      * Two names are considered similar if they are the same in lowercase
      */
      public boolean isSimilar(Name other) {
-    	 if (fullName == null && other.fullName == null) {
-    		 return true;
-    	 } else if (fullName == null || other.fullName == null) {
+    	 if (other == null) {
     		 return false;
-    	 }
+    	 } 
     	 return fullName.toLowerCase().equals(other.fullName.toLowerCase());
      }
 
