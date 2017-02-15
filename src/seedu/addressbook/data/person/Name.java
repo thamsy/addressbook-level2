@@ -59,5 +59,18 @@ public class Name {
     public int hashCode() {
         return fullName.hashCode();
     }
+    
+    /**
+     * Returns true of the other name is very similar to this name.
+     * Two names are considered similar if they are the same in lowercase
+     */
+     public boolean isSimilar(Name other) {
+    	 if (fullName == null && other.fullName == null) {
+    		 return true;
+    	 } else if (fullName == null || other.fullName == null) {
+    		 return false;
+    	 }
+    	 return fullName.toLowerCase().equals(other.fullName.toLowerCase());
+     }
 
 }
