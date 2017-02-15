@@ -21,6 +21,17 @@ public interface ReadOnlyPerson {
     UniqueTagList getTags();
 
     /**
+     * Returns a concatenated version of the printable strings of each object.
+     */
+    default String getPrintableString(Printable... printables) {
+    	final StringBuilder builder = new StringBuilder();
+    	for (Printable p : printables) {
+    		builder.append(p.getPrintableString());
+    		builder.append(" ");
+    	}
+    	return builder.toString().trim();
+    };
+    /**
      * Returns true if the values inside this object is same as those of the other
      * (Note: interfaces cannot override .equals)
      */
