@@ -4,7 +4,7 @@
 
 **Prerequisites**
 
-* JDK 8 or later 
+* JDK 8 or later
 * Eclipse IDE
 
 **Importing the project into Eclipse**
@@ -27,15 +27,36 @@
 
 1. Open a DOS window in the `test` folder
 2. Run the `runtests.bat` script
-3. If the script reports that there is no difference between `actual.txt` and `expected.txt`, 
+3. If the script reports that there is no difference between `actual.txt` and `expected.txt`,
    the test has passed.
 
 **Mac/Unix/Linux**
 
 1. Open a terminal window in the `test` folder
 2. Run the `runtests.sh` script
-3. If the script reports that there is no difference between `actual.txt` and `expected.txt`, 
+3. If the script reports that there is no difference between `actual.txt` and `expected.txt`,
    the test has passed.
+
+### User Story
+
+1. As a student, I want to edit the contacts in the Address Book, in case I make mistakes
+
+### Use Cases
+
+System: AddressBook-Level2<br>
+Use Case: UC1 - Rename Existing Tag<br>
+Actor: User<br>
+Main Success Story:
+1. User enters `renameTag TAG NEW_NAME` in command line, where `TAG` is the name of the tag and `NEW_NAME` is the new name for the tag
+2. Address Book searches for the corresponding tag and replaces them all with the new name
+3. Display success message
+Extentions:
+2. a) Address Book does not find any tag with that name
+  2. a1) System displays error message
+
+### NFR
+
+1. Doing Regex check on information that has been added
 
 ### JUnit tests
 
